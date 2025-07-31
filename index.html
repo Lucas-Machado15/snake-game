@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐍 Snake Game - Hacktown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Snake Game</h1>
+        <div class="score">Pontuação: <span id="score">0</span></div>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div class="controls">
+            Desktop: Use as setas do teclado • Mobile: Deslize na tela<br>
+            Colete as maçãs para crescer • Pressione ESPAÇO para pausar
+        </div>
+        <div class="credits">
+            Criado para o HackTown 2025, com Amazon Q
+        </div>
+        
+        <div class="start-screen" id="startScreen">
+            <h2>🐍 Snake Game</h2>
+            <p>Bem-vindo ao jogo da cobrinha!</p>
+            <button onclick="startGame()">Iniciar Jogo</button>
+            <div class="credits">
+                Criado para o HackTown 2025, com Amazon Q
+            </div>
+        </div>
+        
+        <div class="game-over" id="gameOver">
+            <h2>Game Over!</h2>
+            <p>Pontuação Final: <span id="finalScore">0</span></p>
+            <button onclick="resetGame()">Jogar Novamente</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
