@@ -4,69 +4,70 @@
 
 body {
     margin: 0;
-    padding: 20px;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
     background: #f8fafc;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     color: #1e293b;
+    overflow: hidden;
 }
 
 .game-container {
     text-align: center;
     background: white;
-    padding: 32px;
-    border-radius: 24px;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    max-width: 100vw;
-    max-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    margin: 10px;
     position: relative;
     z-index: 10;
+    box-sizing: border-box;
 }
 
 canvas {
     border: 2px solid #e2e8f0;
-    border-radius: 16px;
+    border-radius: 12px;
     background: #000;
-    max-width: 90vw;
-    max-height: 60vh;
-    width: 400px;
-    height: 400px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
 }
 
 h1 {
-    font-size: clamp(1.8rem, 4vw, 2.2rem);
-    margin: 0 0 16px 0;
+    font-size: 2rem;
+    margin: 0 0 15px 0;
     font-weight: 600;
     color: #0f172a;
 }
 
 .score {
-    font-size: clamp(1.1rem, 3vw, 1.3rem);
-    margin: 16px 0;
+    font-size: 1.2rem;
+    margin: 15px 0;
     font-weight: 500;
     color: #22c55e;
 }
 
 .controls {
-    margin: 16px 0 8px 0;
-    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    margin: 15px 0 10px 0;
+    font-size: 0.85rem;
     color: #64748b;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 .credits {
-    margin-top: 16px;
-    font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+    margin-top: 15px;
+    font-size: 0.75rem;
     color: #94a3b8;
-    line-height: 1.4;
+    line-height: 1.3;
 }
 
 .game-over, .start-screen {
@@ -119,13 +120,47 @@ button:hover {
     }
     
     .game-container {
-        padding: 20px;
+        padding: 15px;
+        margin: 5px;
+        border-radius: 15px;
+    }
+    
+    h1 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+    
+    .score {
+        font-size: 1.1rem;
+        margin: 10px 0;
+    }
+    
+    .controls {
+        font-size: 0.8rem;
+        margin: 10px 0 8px 0;
+    }
+    
+    .credits {
+        font-size: 0.7rem;
+        margin-top: 10px;
     }
     
     canvas {
-        width: 300px;
-        height: 300px;
-        max-width: 85vw;
-        max-height: 50vh;
+        border-radius: 10px;
+    }
+}
+
+@media (max-height: 700px) {
+    .game-container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+    
+    .score, .controls, .credits {
+        margin: 8px 0;
     }
 }

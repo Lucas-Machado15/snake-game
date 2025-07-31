@@ -261,7 +261,9 @@ document.addEventListener('keydown', (e) => {
             break;
         case 'Space':
             e.preventDefault();
-            gameRunning = !gameRunning;
+            if (dx !== 0 || dy !== 0) {
+                gameRunning = !gameRunning;
+            }
             break;
     }
 });
